@@ -19,10 +19,9 @@ if __name__ == "__main__":
     search()
 
 
-
-
-import csv
-
-with open('sample.csv','r')as f:
-    reader = csv.reader(f)
-    print(line)
+from csv import reader
+with open('source.csv', 'r') as csv_file:
+    csv_reader = reader(csv_file)
+    list_of_rows = list(csv_reader)
+    print(list_of_rows)
+source = list_of_rows
